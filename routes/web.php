@@ -45,7 +45,7 @@ Route::get('/', function () {
 Route::get('/login', [LoginController::class, 'index'])->name('login')
 ->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
-Route::get('/logout', [LoginController::class, 'logout']);
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Route Barang Masuk
 Route::get('/barang_masuk', [ProductsInController::class, 'index'])
@@ -100,3 +100,7 @@ Route::get('/cetak/bm', [CetakPDFController::class, 'cetak_bm'])->middleware('au
 Route::get('/cetak/bk', [CetakPDFController::class, 'cetak_bk'])->middleware('auth');
 
 Route::post('/filter', [ProductsInController::class, 'filter'])->middleware('auth');
+
+
+Route::get('/dumlog', [LoginController::class, 'dummy_login']);
+Route::post('/dumlog', [LoginController::class, 'check_login'])->name('login.check_login');

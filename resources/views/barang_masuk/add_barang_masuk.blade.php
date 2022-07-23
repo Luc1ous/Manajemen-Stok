@@ -77,7 +77,7 @@
 
 <script>
   
-  $('#harga_satuan').on('keyup', function (e) {
+  $('#harga_satuan, #jumlah_barang').on('keyup', function (e) {
     var code = e.keyCode || e.which
     var jumlah = $('#jumlah_barang').val()
     var harga = $('#harga_satuan').val()

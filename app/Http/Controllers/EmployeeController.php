@@ -119,4 +119,5 @@ class EmployeeController extends Controller
         Alert::success('Success', 'Data berhasil dihapus');
         return redirect()->back();
     }
+
 }

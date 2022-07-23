@@ -6,6 +6,7 @@ use App\Models\ProductsIn;
 use Barryvdh\DomPDF\Facade as PDF;
 use App\Http\Controllers\Controller;
 use App\Models\ProductOut;
+use Illuminate\Http\Request;
 
 class CetakPDFController extends Controller
 {

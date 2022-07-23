@@ -31,6 +31,32 @@ class LoginController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/login');
+        return response()->json([
+            'message' => 'Berhasil logout'
+        ]);
     }
+
+    // public function dummy_login()
+    // {
+    //     return view('auth.dummy_login');
+    // }
+
+    // public function check_login(Request $request)
+    // {
+    //     $credentials = $request->validate([
+    //         'username' => 'required',
+    //         'password' => 'required',
+    //     ]);
+
+    //     if (Auth::attempt($credentials)) {
+    //         return response()->json([
+    //             'success' => true,
+    //         ], 200);
+    //     } else {
+    //         return response()->json([
+    //             'success' => false,
+    //             'message' => 'Login gagal !',
+    //         ], 401);
+    //     }
+    // }
 }

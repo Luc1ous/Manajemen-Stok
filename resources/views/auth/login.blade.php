@@ -46,7 +46,7 @@
                         </div>
                     @enderror
                 </div>
-                <button type="submit" class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Log in</button>
+                <button type="submit" class="btn btn-primary btn-block btn-lg shadow-lg mt-5 btn-login">Log in</button>
             </form>
         </div>
     </div>
