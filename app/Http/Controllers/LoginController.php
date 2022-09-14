@@ -8,7 +8,8 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class LoginController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
+        // dd($request->ip());
         return view('auth.login');
     }
 
